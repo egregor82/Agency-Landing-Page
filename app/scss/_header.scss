@@ -1,0 +1,160 @@
+.main-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $black;
+    height: 90px;
+    z-index: 1000;
+    @include media-breakpoint-down(md) {
+        height: 50px;
+    }
+}
+
+.nav-main {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    @include media-breakpoint-down(md) {
+        display: block;
+        text-align: right;
+        //align-items: center;
+    }
+
+    a {
+        display: inline-block;
+        top: 50%;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #e0e0e0;
+        font-size: 14px;
+        height: 100%;
+        padding: 34px 25px;
+        min-width: 130px;
+        transition: all .5s ease-in-out;
+        @include media-breakpoint-down(md) {
+            display: block;
+            padding: 0;
+        }
+        &:hover {
+            background-color: $red;
+        }
+
+        &.active {
+            background-color: $red;
+        }
+    }
+}
+
+    #nav-burger {
+        position: relative;
+        display: none;
+        @include media-breakpoint-down(md) {
+            display: inline-block;
+            z-index: 1100;
+            margin-top: 5px;
+        }
+        #menu-btn {
+            display: block;
+            min-width: 40px ;
+            height: 40px;
+            border-radius: 50%;
+            position: relative;
+            background-color: #e0e0e0;
+
+            span {
+                position: absolute;
+                background-color: $black;
+                top: 50%;
+                margin-top: -1px;
+                margin-left: -10px;
+                left: 50%;
+                height: 2px;
+                width: 20px;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    background-color: $black;
+                    top: 50%;
+                    margin-top: -1px;
+                    margin-left: -10px;
+                    left: 50%;
+                    height: 2px;
+                    width: 20px;
+                    transition: all .3s linear;
+                    transform: translateY(-5px);
+                }
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    background-color: $black;
+                    top: 50%;
+                    margin-top: -1px;
+                    margin-left: -10px;
+                    left: 50%;
+                    height: 2px;
+                    width: 20px;
+                    transition: all .5s linear;
+                    transform: translateY(5px);
+                }
+            }
+
+            .slim {
+                &:before {
+                    transform: translateY(-1px);
+                }
+
+                &:after {
+                    transform: translateY(1px);
+                }
+            }
+
+            &:hover {
+                background-color: $red;
+            }
+
+            &.active {
+                background-color: $red;
+            }
+        }
+
+    }
+
+
+.dropdown-menu {
+    display: flex;
+    height: 90px;
+    background-color: $black;
+    text-align: center;
+    transition: all .5s linear;
+    @include media-breakpoint-down(md) {
+        display: block;
+        height: auto;
+        box-shadow: 2px 14px 73px 0px rgba(0, 0, 0, 0.29);
+        z-index: 1;
+        transform: translateY(-1px);
+        a{
+            animation: slide-down 1s ease 0s forwards;
+        }
+    }  
+}
+
+.display-menu {
+    @include media-breakpoint-down(md) {
+        display: none;
+    } 
+}
+
+@keyframes slide-down {
+    from {
+        max-height: 0;
+        padding: 0;
+    }
+    to {
+        max-height: 44px;
+        padding: 12px 16px;
+    }
+  }

@@ -1,0 +1,44 @@
+footer {
+    width: 100%;
+    background-color: #313030;
+    padding: 45px 0;
+    justify-content: center;
+    @include media-breakpoint-down(md) {
+        padding: 25px 0;
+    }
+}
+
+.footer-block {
+    color: #b8b8b8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    @include media-breakpoint-down(md) {
+        display: block;
+        text-align: center;
+    }
+    .copyright {
+        display: block;
+    }
+    .social-links{
+        @include media-breakpoint-down(md) {
+            display: flex;
+            justify-content: center;
+        } 
+    }
+    a {
+        display: inline-block;
+        border-radius: 50%;
+        margin: 0 8px;
+
+        @include media-breakpoint-down(md) {
+            margin: 5px;
+        }
+
+        &:hover {
+            background-color: $red;
+            border-radius: 50%;
+        }
+    }
+}

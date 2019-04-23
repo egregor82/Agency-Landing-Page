@@ -1,0 +1,455 @@
+//Head section
+.main-head-section {
+    padding-top: 200px;
+    padding-bottom: 110px;
+    background-color: $grey;
+    @include media-breakpoint-down(md) {
+        padding-top: 90px;
+        padding-bottom: 30px;
+    }
+}
+
+.main-head-header-block{
+    @include media-breakpoint-down(md) {
+        margin-bottom: 20px;
+    }
+}
+
+.main-head-p {
+    margin-bottom: 60px;
+    font-size: 16px;
+    color: #494848;
+}
+
+.main-head-header {
+    display: block;
+    font-size: 60px;
+    line-height: 1.3;
+    font-weight: 800;
+    letter-spacing: .1em;
+    margin-bottom: 35px;
+
+    @include media-breakpoint-down(md) {
+        font-size: 30px;
+    }
+    span {
+        letter-spacing: .5rem;
+    }
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+    height: 0;
+    
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.main-head-video {
+    box-shadow: -2px -14px 73px 0px rgba(0, 0, 0, 0.29);
+}
+
+//We offer section
+.border-grey{
+    border-bottom: 2px solid $grey;
+}
+
+.we-can-offer-block{
+    margin-bottom: 50px;
+}
+
+.we-can-offer-header {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    @include media-breakpoint-down(md) {
+        font-size: 25px;
+        margin-bottom: 25px;
+    }
+}
+
+.we-can-offer-p {
+    margin-bottom: 60px;
+}
+
+.offers {
+    img {
+        width: 40px;
+        margin-bottom: 30px;
+    }
+    .offers-header{
+        font-size: 24px;
+        font-weight: 600;
+        padding-bottom: 25px;
+    }
+    p {
+        padding-bottom: 50px;
+        margin: 0 auto;
+    }
+    .bottom-offers {
+        padding-bottom: 0px;
+        @include media-breakpoint-down(md) {
+            padding-bottom: 30px;
+        }
+    }
+}
+//Future section
+.future-products{
+    text-align: center;
+    .future-products-head{
+        margin: 0 auto 115px auto;
+        max-width: 520px;
+        .future-products-header{
+            margin-bottom: 35px;
+            font-size: 42px;
+            @include media-breakpoint-down(md) {
+                font-size: 25px;
+            }
+        }
+        &:after{
+            content: "";
+            position: absolute;
+            display: block;
+            width: 132px;
+            border: 2px solid $red;
+            transform: translateX(50%);
+            right: 50%;
+        }
+    }
+    p{
+        color: #737373;
+        margin-bottom: 30px;
+        line-height: 1.6;
+    }
+}
+
+.future-products-nav{
+    margin-top: 90px;
+    margin-bottom: 70px;
+    a{
+        text-decoration: none;
+        color: $black;
+        font-size: 22px;
+        font-weight: 600;
+        margin-right: 30px;
+        margin-left: 30px;
+        display: inline-block;
+        transition: all .3s linear;
+        &:hover{
+            color: $red;
+            text-decoration: none;
+        }
+    }
+    .active-link{
+        color: $red;
+    }
+}
+
+.future-products-img{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    //margin: 0 -2px;
+
+    .element-item{
+        margin: 5px;
+        @include media-breakpoint-down(xs) {
+            margin: 0 auto;
+            left: auto !important;
+        }
+    }
+    img{
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        object-position: left;
+        @include media-breakpoint-down(xs) {
+            margin: 5px 0;
+            left: auto !important;
+        }
+    }
+}
+//Our team section
+.our-team-head{
+    width: 460px;
+    @include media-breakpoint-down(md) {
+        width: 100%;
+    }
+    p{
+        margin-bottom: 35px;
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        display: block;
+        border: 2px solid $red;
+        width: 130px;
+    }
+}
+
+.our-team-info{
+    margin-top: 105px;
+    .member-photo {
+        max-width: 100%;
+    }
+}
+
+.member-name{
+    font-style: 30px;
+    font-weight: 600;
+    display: inline-block;
+    margin: 0;
+}
+
+.memeber-info{
+    margin-top: 35px;
+    margin-bottom: 45px;
+}
+
+.member-social{
+    display: flex;
+    margin-bottom: 65px;
+        a{
+            text-decoration: none;
+            font-style: italic;
+            font-size: 18px;
+            color: #333;
+            transition: all .3s linear;
+            margin-right: 30px;
+            &:hover{
+                color: $red;
+                text-decoration: none;
+            }
+        }
+}
+
+.members{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+    // justify-content: space-around;
+}
+
+.member-list{
+    height: 200px;
+    width: 200px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    margin: 10px;
+    @include media-breakpoint-down(xs) {
+        width: 100%; 
+        height: 300px;
+    }
+    &:hover{
+        .member-name-splash{
+            transform: translateY(0);
+        }
+    }
+    .member-name-splash{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        font-size: 18px;
+        font-weight: 600;
+        color: #fff;
+        background-color: #7a786e;
+        padding: 10px;
+        transition: all .4s linear;
+        transform: translateY(100%);
+        @include media-breakpoint-down(sm) {
+            transform: translateY(0);
+        }
+    }
+}
+
+.member-next{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+// Subscribe section
+
+.subscribe{
+    margin-top: 10px;
+    width: 100%;
+    background-color: #f5f0dd;
+    text-align: center;
+    padding: 130px 15px;
+    @include media-breakpoint-down(md) {
+        padding: 30px 15px;
+    }
+        h3{
+            padding: 0;
+            font-size: 42px;
+            font-weight: 700;
+            color: #fff;
+            @include media-breakpoint-down(md) {
+                font-size: 25px;
+            }
+        }
+        p{
+            color: #fff;
+            display: block;
+            margin-top: 35px;
+            margin-bottom: 65px;
+        }
+}
+
+.mail-input{
+    height: 57px;
+    min-width: 520px;
+    max-width: 100%;
+    border-style: none;
+    border-radius: 6px;
+    display: inline-block;
+    margin-right: 12px;
+    padding-left: 30px;
+    outline: 0;
+    background-color: #fff;
+    @include media-breakpoint-down(md) {
+        min-width: 100%;
+        margin: 0;
+    }
+}
+
+.subscribe-button{
+    font-size: 18px;
+}
+//Get in ... section
+.get-in-section{
+    padding-bottom: 110px;
+    @include media-breakpoint-down(md) {
+        padding-bottom: 0;
+    }
+}
+
+.get-in{
+    width: 730px;
+    padding-bottom: 75px;
+    @include media-breakpoint-down(md) {
+        width: 100%;
+        padding-bottom: 35px;
+    }
+    p{
+        margin-bottom: 35px;
+    }
+    &:after{
+        content: "";
+        position: absolute;
+        display: block;
+        border: 2px solid $red;
+        width: 130px;
+    }
+}
+
+#name-email{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+}
+
+input, textarea{
+    background-color: $grey;
+    border-radius: 6px;
+    border-style: none;
+    outline: 0;
+    color: #000;
+    display: block;
+    margin: 15px 0;
+}
+
+textarea{
+    width: 100%;
+    height: 250px !important;
+    resize: none;
+    margin: 35px 0 !important;
+    padding-left: 50px;
+    padding-top: 25px;
+    @include media-breakpoint-down(md) {
+        margin: 15px 0 !important;
+    }
+}
+
+.get-input-name, .get-input-email{
+    height: 70px;
+    width: 338px;
+    padding-left: 50px;
+    @include media-breakpoint-down(md) {
+        width: 100%;
+    }
+}
+
+.get-input-button{
+    font-size: 16px;
+    width: 100%;
+}
+
+.get-in-black{
+    background-color: $black;
+    padding-left: 80px;
+    padding-top: 145px;
+    color: #d5d5d5;
+    position: relative;
+    @include media-breakpoint-down(md) {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 30px;
+        margin: 0 auto;
+    }
+    @include media-breakpoint-down(sm) {
+        overflow: hidden;
+    }
+    @include media-breakpoint-down(xs) {
+        overflow: hidden;
+    }
+
+    &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        height: 100%;
+        background-color: $black;
+        left: 100%;
+        width: 5000px;
+        top: 0;
+    }
+    h3{
+        font-style: 18px;
+        font-weight: 700;
+        padding-bottom: 40px;
+        margin: 0;
+        @include media-breakpoint-down(md) {
+            display: block;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+    }
+    a{
+        color: #d5d5d5;
+        font-size: 16px;
+        text-decoration: none;
+        display: block;
+        //max-width: 260px;
+        transition: all .3s linear;
+        padding-bottom: 35px;
+        @include media-breakpoint-down(md) {
+            width: 100%;
+            padding-bottom: 15px;
+            text-align: center;
+        }
+        &:hover{
+            color: $red;
+        }
+    }
+}
